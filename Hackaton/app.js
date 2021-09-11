@@ -28,3 +28,5 @@ app.use("/escola", escola_router);
 const cooperativa_router = require("./routers/cooperativa-router");
 app.use("/cooperativa", cooperativa_router);
 
+const login_router = require("./routers/login-router");
+app.use("/login", login_router);
