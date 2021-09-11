@@ -1,8 +1,8 @@
 const Cooperativa = require("../models/cooperativa-model");//vai chamar minha modelagem
 
-exports.index = (req, res) => {
-    res.render("./views/pages/index");
-}
+// exports.index = (req, res) => {
+//     res.render("./views/pages/index");
+// }
 
 exports.cadastrarCooperativa_get = (req, res) => {
     res.render("./views/pages/cadastrarCooperativa");

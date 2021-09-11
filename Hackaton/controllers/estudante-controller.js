@@ -1,8 +1,8 @@
 const Estudante = require("../models/estudante-model");//vai chamar minha modelagem
 
-exports.index = (req, res) => {
-    res.render("./views/pages/index");
-}
+// exports.home = (req, res) => {
+//     res.render("./views/pages/home");
+// }
 
 exports.cadastrarEstudante_get = (req, res) => {
     res.render("./views/pages/cadastrarEstudante");

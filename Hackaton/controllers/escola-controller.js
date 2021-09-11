@@ -1,7 +1,11 @@
 const Escola = require("../models/escola-model");//vai chamar minha modelagem
 
-exports.index = (req, res) => {
-    res.render("./views/pages/index");
+// exports.index = (req, res) => {
+//     res.render("./views/pages/index");
+// }
+
+exports.escola = (req, res) => {
+    res.render("./views/pages/escola");
 }
 
 exports.cadastrarEscola_get = (req, res) => {

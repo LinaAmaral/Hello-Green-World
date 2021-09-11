@@ -17,7 +17,10 @@ const Escola = mongoose.model("escolas", {//variável Livro está configurando a
     telefone: String,
     contato: String,
     tipo: String,
-    tipo_usuario: String
+    tipo_usuario: String,
+    sacolaPlastico: Number,
+    sacolaMetal: Number,   
+    sacolaVidro: Number
 });
 
 module.exports = Escola;

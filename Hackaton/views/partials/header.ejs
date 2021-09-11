@@ -1,124 +1,62 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!doctype html>
+<html lang="en">
 
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="/css/style.css">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
-        <!-- Script JQuery e Bootstrap-->
-        <script src="/js/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css">
+  <script src="https://use.fontawesome.com/fd6609d8e9.js"></script>
 
-        <script src="/js/bootstrap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
 
-        <script src="/js/bootstrap.bundle.js"></script>
+  <title>Hello, world!</title>
+</head>
 
-        <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<body>
 
-        <script>
-            $(document).ready(function () {
-                // configuração botão de seta para cima no scroll
-                var janela = $(window);
+  <header id="top">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="#"><img class="logo" src="images/logo-top.svg"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
 
-                janela.on('scroll', function () {
-                if (janela.scrollTop() < "400") {
-                    $("#setaParaCima").css({ visibility: 'hidden' });
-                } else {
-                    $("#setaParaCima").css({ visibility: 'visible', scrollTop: 'smooth' });
-                }
-                })
-
-                $("#setaParaCima").click(function (){
-                $('html').animate({scrollTop: '0px'}, 600);
-                });
-
-            });
-
-            // botão de libras
-            new window.VLibras.Widget('https://vlibras.gov.br/app');
-
-            // função para submeter termo de pesquisa digitado na barra de busca do cabeçalho
-            function submitPesquisa() {
-                $("#formPesquisa").submit();
-            }         
-        </script>
-
-        <title>Acervo</title>
-    </head>
-
-    <body>
-        <!-- botão LIBRAS -->
-        <div vw class="enabled">
-            <!-- div com botão para habilitar Libras -->
-            <div vw-access-button class="active"></div>
-            <div vw-plugin-wrapper>
-                <div class="vw-plugin-top-wrapper"></div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Dropdown
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+                </li>
+              </ul>
             </div>
+          </nav>
         </div>
-  
-        <!-- botão SETA PARA CIMA, aparece quando o scrollY >= 400px, com a função de subir para o início da página quando clicado -->
-        <aside>
-            <a href="#cabecalho">
-                <svg id="setaParaCima" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-arrow-up-circle m-0 p-0" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
-                </svg>
-            </a>   
-        </aside>
-        <header class="container-fluid sticky-top">
-            <nav class="navbar navbar-expand-lg navbar-light bg-transparent" style="background-color: white;">
-                <div class="container-fluid row">
-                    <div class="col-2">
-                        <a class="navbar-brand" href="/">
-                            <img id="logo-biblio" src="/img/livro-gif.gif" alt="imagem animada de livro">
-                        </a>
-                    </div>
-                  
-                  
-                    <div class="col-7">
-                        <div class="container">
-                            <ul class="navbar-nav d-flex justify-content-between">
-                                <li class="nav-item">
-                                    <a class="nav-link active h5 text-light" aria-current="page" href="/">Home</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link active h5 text-light" aria-current="page" href="/livros/cadastrarLivro">Cadastrar Livros</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link active h5 text-light" aria-current="page" href="/livros">Acervo de Livros
-                                        <ul id="generos-livros">
-                                            <li><a href="#">Suspense/Terror</a></li>
-                                            <li><a href="#">Aventura</a></li>
-                                            <li><a href="#">Ficção Científica</a></li>
-                                            <li><a href="#">Literatura Brasileira</a></li>
-                                            <li><a href="#">Infantil</a></li>
-                                        </ul>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>                       
-                    </div>
-
-                    <div class="col-3 d-flex justify-content-end">
-                        <!-- CAMPO/FORM DE BUSCA -->
-                        <section class="d-flex">
-                            <form action="/resultadosPesquisa" method="GET" class="form" id="formPesquisa">
-                                <div class="input-group">                              
-                                    <input type="search" name="busca" class="form-control" placeholder="Busca Autor/Título/Gênero/Editora" title="Busca por Autor / Título / Gênero / Editora">                               
-                                    <div class="input-group-append">
-                                        <div class="input-group-text">
-                                            <a href="#" onclick="submitPesquisa()">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" value="search">
-                                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                                                </svg>
-                                            </a>                                           
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>  
-                        </section>
-                    </div>                       
-                </div>
-            </nav>
-        </header>
+      </div>
+    </div>
+  </header>

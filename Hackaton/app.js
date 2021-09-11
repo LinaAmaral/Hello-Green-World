@@ -19,6 +19,9 @@ app.use(express.urlencoded({ extended: true }));//permitindo fluxo/tráfego entr
 app.use(express.json());// fluxo/tráfego de informações vai ser no formato json
 app.use(express.static("public"));//permissão para usar a pasta public
 
+const home_router = require("./routers/home-router");
+app.use("/", home_router);
+
 const estudante_router = require("./routers/estudante-router");
 app.use("/estudante", estudante_router);
 
