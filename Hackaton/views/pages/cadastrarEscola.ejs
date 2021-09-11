@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+        <!-- Script JQuery e Bootstrap-->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="mt-5 text-center">Cadastrar Escola</h1>
+            <form action="/escola/cadastrarEscola" method="POST" class="form">
+                <div class="row">
+                    <div class="form-group col-4">
+                        <label for="nome">* Nome:</label>
+                        <input class="form-control " type="text" id="nome" name="nome" placeholder="Digite o nome da escola" required>
+                    </div>
+    
+                    <div class="form-group col-4">
+                        <label for="cnpj">* CNPJ:</label>
+                        <input onkeypress="$(this).mask('00.000.000/0000-00')" class="form-control  " type="number" id="cnpj" name="cnpj" placeholder="Digite o CNPJ" required>
+                    </div>
+
+                    <div class="form-group col-4">
+                        <label for="email">* Email da Escola:</label>                       
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">@</div>
+                            </div>
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Ex: escola@gmail.com" required>
+                        </div>                                                 
+                    </div>   
+                </div>
+
+                <div class="row">
+                    <div class="col-3">
+                        <label for="cep">* CEP:</label>
+                        <input onkeypress="$(this).mask('00.000-000')" onblur="pesquisacep(this.value)" type="text" class="form-control" name="cep" placeholder="digite apenas números" id="cep" maxlength="8" />
+                    </div>
+                    
+                    <div class="form-group col-4">
+                        <label for="logradouro">* Logradouro:</label>
+                        <input class="form-control" type="text" id="rua" name="logradouro" required>
+                    </div>
+
+                    <div class="form-group col-2">
+                        <label for="numero">* Número:</label>
+                        <input class="form-control" type="text" id="numero" name="numero" required>
+                    </div>
+
+                    <div class="form-group col-3">
+                        <label for="complemento">Complemento:</label>
+                        <input class="form-control" type="text" id="complemento" name="complemento">
+                    </div>                   
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-2">
+                        <label for="bairro">* Bairro:</label>
+                        <input class="form-control" type="text" id="bairro" name="bairro" required>
+                    </div>
+                    <div class="form-group col-4">
+                        <label for="cidade">* Cidade:</label>
+                        <input class="form-control" type="text" id="cidade" name="cidade" required>
+                    </div>
+
+                    <div class="form-group col-3">
+                        <label for="estado">* Estado:</label>
+                        <input class="form-control" type="text" id="uf" name="estado" required>
+                    </div>
+
+                    <div class="form-group col-3">* Telefone</label>                       
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Tel: </div>
+                            </div>
+                            <input type="tel" class="form-control" placeholder="DDD + número" aria-label="fone"
+                            aria-describedby="espaco-fone" onkeypress="$(this).mask('(00) 0000-00009')"     name="telefone" id="telefone" required>                           
+                        </div>                                                 
+                    </div> 
+                </div>
+
+
+                <div class="row">
+                    <div class="form-group col-6">
+                        <label for="contato">* Pessoa de Contato:</label>
+                        <input class="form-control" type="text" id="contato" name="contato" required>
+                    </div>
+
+                    <div class="form-group col-6">
+                        <label for="tipo">Tipo</label>
+                        <select class="form-control" id="tipo" name="tipo" required>
+                            <option value="">Escolha</option>
+                            <option value="publica">Pública</option>
+                            <option value="privada">Privada</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <button class="btn btn-primary " type="submit">Enviar</button>
+                    </div>                    
+                </div>
+            </form>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+        </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
+        </script>
+
+        <script src="/js/script.js"></script>
+
+    </body>
+</html>

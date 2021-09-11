@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+        <!-- Script JQuery e Bootstrap-->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="mt-5 text-center">Cadastrar Estudante</h1>
+
+            <form action="/estudante/cadastrarEstudante" method="POST" class="form">
+                <div class="row">
+                    <div class="form-group col-4">
+                        <label for="nomeDoAluno">* Nome:</label>
+                        <input class="form-control text-uppercase " type="text" id="nomeDoAluno" name="nome" placeholder="Digite o nome do estudante" required>
+                    </div>
+    
+                    <div class="form-group col-8">
+                        <label for="sobreNomeAluno">* Sobrenome:</label>
+                        <input class="form-control text-uppercase " type="text" id="sobreNomeAluno" name="sobrenome"   placeholder="Digite o sobrenome do estudante" required>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-6">
+                        <label for="dataNascimento">* Data de Nascimento:</label>
+                        <input class="form-control text-uppercase " type="date" id="dataNascimento" name="dataNascimento" required>
+                    </div>
+
+                    <div class="form-group col-6">
+                        <label for="emailEstudante">* Email do Estudante:</label>                       
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">@</div>
+                            </div>
+                            <input type="email" class="form-control " name="emailEstudante" id="email" placeholder="Ex: joaoluiz342@gmail.com"  required>
+                        </div>                                                 
+                    </div>    
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-6">
+                        <label for="escola">* Escola</label>
+                        <input class="form-control text-uppercase " type="text" id="escola" name="escola" required>
+                    </div>
+
+                    <div class="form-group col-6">* Telefone</label>                       
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Tel: </div>
+                            </div>
+                            <input type="tel" class="form-control " name="telefone" id="telefone" placeholder="(xx) x xxxx-xxxx"  required>
+                        </div>                                                 
+                    </div>    
+                </div>
+
+                <div class="row">
+                    <div class="col-6">
+                        <button class="btn btn-primary text-uppercase" type="submit">Enviar</button>
+                    </div> 
+                </div>
+            </form>
+        </div>
+        
+
+
+    </body>
+</html>
