@@ -19,40 +19,39 @@
     </head>
     <body>
         <div class="container">
-            <h1 class="mt-5 text-center">Cadastrar Escola</h1>
-            <form action="/escola/cadastrarEscola" method="POST" class="form">
+            <h1 class="mt-5 text-center">Cadastrar Cooperativa</h1>
+            <form action="/cooperativa/cadastrarCooperativa" method="POST" class="form">
                 <div class="row">
                     <div class="form-group col-6">
                         <label for="nome">* Nome:</label>
-                        <input class="form-control " type="text" id="nome" name="nome" placeholder="Digite o nome da escola" required>
+                        <input class="form-control " type="text" id="nome" name="nome" placeholder="Digite o nome da cooperativa" required>
                     </div>
     
                     <div class="form-group col-6">
                         <label for="cnpj">* CNPJ:</label>
                         <input onkeypress="$(this).mask('00.000.000/0000-00')" class="form-control" type="text" id="cnpj" name="cnpj" placeholder="Digite o CNPJ" required>
-                    </div>
+                    </div>                      
                 </div>
 
                 <div class="row">
                     <div class="form-group col-6">
-                        <label for="email">* Email da Escola:</label>                       
+                        <label for="email">* Email da Cooperativa:</label>                       
                         <div class="input-group">
                             <div class="input-group-prepend">
                                 <div class="input-group-text">@</div>
                             </div>
-                            <input type="email" class="form-control" name="email" id="email" placeholder="Ex: escola@gmail.com" required>
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Ex: cooperativa@gmail.com" required>
                         </div>                                                 
-                    </div> 
+                    </div>
 
                     <div class="form-group col-6">
                         <label for="senha">* Senha de Acesso:</label>                       
                         <input type="password" class="form-control" name="senha" id="senha" placeholder="********" required>                                               
                     </div>
                 </div>
-                    
-
+                
                 <div class="row">
-                    <div class="form-group col-3">
+                    <div class="col-3">
                         <label for="cep">* CEP:</label>
                         <input onkeypress="$(this).mask('00.000-000')" onblur="pesquisacep(this.value)" type="text" class="form-control" name="cep" placeholder="digite apenas números" id="cep" maxlength="8" />
                     </div>
@@ -84,11 +83,18 @@
                     </div>
 
                     <div class="form-group col-3">
-                        <label for="estado">* Estado:</label>
-                        <input class="form-control" type="text" id="uf" name="estado" required>
-                    </div>
+                        <label>* Estado</label>                       
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">UF </div>
+                            </div>
+                            <input type="tel" class="form-control" placeholder="UF" aria-label="estado"
+                            aria-describedby="estado" name="estado" id="uf" required>                           
+                        </div>                                                 
+                    </div> 
 
-                    <div class="form-group col-3">* Telefone</label>                       
+                    <div class="form-group col-3">
+                        <label>* Telefone</label>                       
                         <div class="input-group">
                             <div class="input-group-prepend">
                                 <div class="input-group-text">Tel: </div>
@@ -107,22 +113,43 @@
                     </div>
 
                     <div class="form-group col-6">
-                        <label for="tipo">Tipo</label>
-                        <select class="form-control" id="tipo" name="tipo" required>
-                            <option value="">Escolha</option>
-                            <option value="publica">Pública</option>
-                            <option value="privada">Privada</option>
-                        </select>
+                        <label for="material">* Material Reciclado:</label>
+                        <div class="form-check-inline" id="material" name="material" required>                           
+                            <div class="form-check">
+                                <label class="form-check-label form-check-inline">
+                                    <input type="checkbox" class="form-check-input" value="metal">Metal
+                                </label>                               
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" value="papel">Papel
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" value="plastico">Plástico
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" value="vidro">Vidro
+                                </label>
+                            </div>
+                           <style>
+                                input[checkbox] {
+                                    display: inline-block;
+                                }
+                           </style>
+                        </div>
                     </div>
                 </div>
 
 
-                <input class="form-control d-none" id="tipo_usuario" name="tipo_usuario" value="escola">
-
+                <input class="form-control d-none" id="tipo_usuario" name="tipo_usuario" value="cooperativa">
 
                 <div class="row">
                     <div class="col-12">
-                        <button class="btn btn-primary " type="submit">Enviar</button>
+                        <button class="btn btn-primary" type="submit">Enviar</button>
                     </div>                    
                 </div>
             </form>

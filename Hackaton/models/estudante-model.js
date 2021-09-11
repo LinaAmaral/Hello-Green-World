@@ -7,8 +7,10 @@ const Estudante = mongoose.model("estudantes", {//variável Livro está configur
     sobrenome: String,
     dataNascimento: String,
     email: String,
+    senha: String,
     escola: String,
-    telefone: String
+    telefone: String,
+    tipo_usuario: String
 });
 
 module.exports = Estudante;

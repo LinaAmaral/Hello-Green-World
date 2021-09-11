@@ -14,6 +14,7 @@ exports.cadastrarEscola_post = (req, res) => {
     escola.nome = req.body.nome;
     escola.cnpj = req.body.cnpj;
     escola.email = req.body.email;
+    escola.senha = req.body.senha;
     escola.logradouro = req.body.logradouro;
     escola.numero = req.body.numero;
     escola.complemento = req.body.complemento;
@@ -24,6 +25,7 @@ exports.cadastrarEscola_post = (req, res) => {
     escola.telefone = req.body.telefone;
     escola.contato = req.body.contato;
     escola.tipo = req.body.tipo;
+    escola.tipo_usuario = req.body.tipo_usuario;
     
     console.log(escola);
     //depois vai salvar o livro no BD

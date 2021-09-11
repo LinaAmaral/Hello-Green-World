@@ -28,18 +28,19 @@
                         <input class="form-control text-uppercase " type="text" id="nomeDoAluno" name="nome" placeholder="Digite o nome do estudante" required>
                     </div>
     
-                    <div class="form-group col-8">
+                    <div class="form-group col-5">
                         <label for="sobreNomeAluno">* Sobrenome:</label>
                         <input class="form-control text-uppercase " type="text" id="sobreNomeAluno" name="sobrenome"   placeholder="Digite o sobrenome do estudante" required>
+                    </div>
+
+                    <div class="form-group col-3">
+                        <label for="dataNascimento">* Data de Nascimento:</label>
+                        <input class="form-control text-uppercase " type="date" id="dataNascimento" name="dataNascimento" required>
                     </div>
                 </div>
 
                 <div class="row">
-                    <div class="form-group col-6">
-                        <label for="dataNascimento">* Data de Nascimento:</label>
-                        <input class="form-control text-uppercase " type="date" id="dataNascimento" name="dataNascimento" required>
-                    </div>
-
+                   
                     <div class="form-group col-6">
                         <label for="emailEstudante">* Email do Estudante:</label>                       
                         <div class="input-group">
@@ -48,7 +49,12 @@
                             </div>
                             <input type="email" class="form-control " name="emailEstudante" id="email" placeholder="Ex: joaoluiz342@gmail.com"  required>
                         </div>                                                 
-                    </div>    
+                    </div>  
+                    
+                    <div class="form-group col-6">
+                        <label for="senha">* Senha de Acesso:</label>                       
+                        <input type="password" class="form-control" name="senha" id="senha" placeholder="********" required>                                               
+                    </div>
                 </div>
 
                 <div class="row">
@@ -57,15 +63,13 @@
                         <input class="form-control text-uppercase " type="text" id="escola" name="escola" required>
                     </div>
 
-                    <div class="form-group col-6">* Telefone</label>                       
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <div class="input-group-text">Tel: </div>
-                            </div>
-                            <input type="tel" class="form-control " name="telefone" id="telefone" placeholder="(xx) x xxxx-xxxx"  required>
-                        </div>                                                 
+                    <div class="form-group col-6">
+                        <label for="telefone">* Telefone</label>                       
+                        <input type="tel" class="form-control " name="telefone" id="telefone" placeholder="(xx) x xxxx-xxxx" onkeypress="$(this).mask('(00) 0000-00009')" required>                                               
                     </div>    
                 </div>
+
+                <input class="form-control d-none" id="tipo_usuario" name="tipo_usuario" value="estudante">
 
                 <div class="row">
                     <div class="col-6">
@@ -75,7 +79,20 @@
             </form>
         </div>
         
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+        </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
+        </script>
+
+        <script src="/js/script.js"></script>
 
     </body>
 </html>

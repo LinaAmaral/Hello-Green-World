@@ -1,0 +1,39 @@
+const Cooperativa = require("../models/cooperativa-model");//vai chamar minha modelagem
+
+exports.index = (req, res) => {
+    res.render("./views/pages/index");
+}
+
+exports.cadastrarCooperativa_get = (req, res) => {
+    res.render("./views/pages/cadastrarCooperativa");
+}
+
+exports.cadastrarCooperativa_post = (req, res) => {
+    let cooperativa = new Cooperativa();
+    
+    cooperativa.nome = req.body.nome;
+    cooperativa.cnpj = req.body.cnpj;
+    cooperativa.email = req.body.email;
+    cooperativa.senha = req.body.senha;
+    cooperativa.logradouro = req.body.logradouro;
+    cooperativa.numero = req.body.numero;
+    cooperativa.complemento = req.body.complemento;
+    cooperativa.bairro = req.body.bairro;
+    cooperativa.cidade = req.body.cidade;
+    cooperativa.cep = req.body.cep;
+    cooperativa.estado = req.body.estado;
+    cooperativa.telefone = req.body.telefone;
+    cooperativa.contato = req.body.contato;
+    cooperativa.material = req.body.material;
+    cooperativa.tipo_usuario = req.body.tipo_usuario;
+    
+    console.log(cooperativa);
+    //depois vai salvar o livro no BD
+    cooperativa.save((err) => {
+        if(err) 
+            return res.status(500).send("Erro ao cadastrar cooperativa.");        
+
+        // por fim, vai redirecionar para a página que lista livros cadastrados
+        res.send("cooperativa"); 
+    });
+};
