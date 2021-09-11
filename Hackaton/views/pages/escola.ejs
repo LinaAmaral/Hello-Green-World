@@ -1,76 +1,92 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
-        <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
+    <script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
 
-        <!-- Script JQuery e Bootstrap-->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <title>Escola</title>
+</head>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<style>
+    img {
+        border-radius: 100%;
+    }
 
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    aside {
+        padding: 0.5%;
+        width: 20%;
+        text-align: center;
+    }
 
+    #posicaoRanking {
+        background: lightgray;
+    }
 
-        <script src="jquery.min.js"></script>
-        <script src="owlcarousel/owl.carousel.min.js"></script> 
+    #extratoBem {
+        background-color: greenyellow;
+    }
 
-        <title>Document</title>
-    </head>
-    <body>
-        <main class="container bg-light">
-            <div class="">
-                <a href=""><img src=".img/" alt="imagem de sacola de reciclagem verde"></a>
-            </div>
+    #classificaoAlunos {
+        background-color: turquoise;
+    }
 
-            <div class="">
-                <a href=""><img src="" alt="imagem de sacola de reciclagem amarela"></a>
-            </div>
+    aside {
+        background-color: lightgoldenrodyellow;
+    }
+</style>
 
-            <div class="">
-                <a href=""><img src="" alt="imagem de sacola de reciclagem vermelha"></a>
-            </div>
-        </main>
-        <section class="container">
-            <div class="owl-carousel owl-theme owl-loaded">
-                <div class="owl-stage-outer">
-                    <div class="owl-stage">
-                        <div class="owl-item">
-                            <img src="../../public/img/blusa-azul-bege-rubinell.png" alt="">
-                        </div>
-                        <div class="owl-item">
-                            <img src="../../public/img/blusa-bege-listras.png" alt="">
-                        </div>
-                        <div class="owl-item">
-                            <img src="../../public/img/short-azul-arabescos-farm-40.png" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="owl-nav">
-                    <div class="owl-prev">prev</div>
-                    <div class="owl-next">next</div>
-                </div>
-                <div class="owl-dots">
-                    <div class="owl-dot active"><span></span></div>
-                    <div class="owl-dot"><span></span></div>
-                    <div class="owl-dot"><span></span></div>
-                </div>
-            </div>
+<body>
 
-        </section>
+    <a href="#" id="saco_vidro">Imagem sacola - Minha sacola de vidro encheu</a> <br>
+    <a href="#" id="saco_metal">Imagem sacola - Minha sacola de latinha encheu</a> <br>
+    <a href="#" id="saco_plastico">Imagem sacola - Minha sacola de pet encheu</a> <br>
+    <a href="#" id="saco_tnt">Imagem sacola recicla TNT </a> <br>
 
-        <script>
-            $(document).ready(function(){
-                $(".owl-carousel").owlCarousel();
-            });
-        </script>
-        
-    </body>
+    <div id="msgMetal">Parabens! Em breve a Cooperativa Upciclagem irá recolher o seu saco cheio de latinhas! </div>
+    <div id="msgPlastico">Mais um saco de garrafas PET a menos no mundo! Em breve a Cooperativa Bio Renova irá recolher
+        seu saco.</div>
+    <div id="msgVidro"> Muito bem! Você está cada vez mais perto do seu objetivo. Aguarde, em breve a Cooperativa
+        Recicla irá recolher esse vidro.</div>
+    <div id="msgTnt"> Excelente trabalho! Vocês estão em velocidade dois para alcançar o objetivo.</div>
+
+    <aside>
+        <h1>Ranking</h1>
+        <img src="/images/taca.jpg" alt="taça">
+        <h2> 458 xp</h2>
+        <a href="#" id="AtivaPosicaoRanking">Ver minha posição no Ranking</a> <br>
+        <a href="#" id="AtivaextratoBem">Ver meu extrato do bem</a> <br>
+        <a href="#" id="AtivaclassificaoAlunos">Conferir classificação dos meus alunos</a>
+
+        <div id="posicaoRanking">
+            1° Escola Municipal Alfa - 560xp <br>
+            2° Creche Mãe Rosa - 470xp <br>
+            3° Escola Estadual Brasil - 458xp <br>
+            4° Domingo Ribeiro Tavares - 389xp <br>
+        </div>
+        <div id="extratoBem">
+            458.000kg<br>
+            Com o lixo arrecadado até agora você já impediu que 10 milhoes de garrafas fossem parar nos oceanos. <br>
+            Você já já impediu que fossem gerados 52 kilos de CO2 na atmosfera. <br>
+            Você contribuiu para a manutenção do emprego de 148 catadores de reciclável <br>
+            Você ajudou a salvar 20 vidas marinhas.
+        </div>
+        <div id="classificaoAlunos">
+            1° João José da Silva - 120xp <br>
+            2° Maria Firmino Costa - 78xp <br>
+            3° Francisca da Silva - 59xp
+        </div>
+    </aside>
+
+    <a href="#">Distribuir xp para meus alunos</a>
+    
+    <script src="/js/escola.js"></script>
+</body>
+
 </html>
