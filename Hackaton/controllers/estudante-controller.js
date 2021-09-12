@@ -1,8 +1,15 @@
 const Estudante = require("../models/estudante-model");//vai chamar minha modelagem
 
-// exports.home = (req, res) => {
-//     res.render("./views/pages/home");
-// }
+exports.estudante = (req, res) => {
+    res.render("./views/pages/estudante");
+}
+
+exports.estudante = (req, res) => {
+    let id = req.params.id;
+    Estudante.findOne({ _id: id }, (err, estudante) => {
+        res.render("./views/pages/estudante", { estudante: estudante });
+    })
+}
 
 exports.cadastrarEstudante_get = (req, res) => {
     res.render("./views/pages/cadastrarEstudante");
@@ -26,6 +33,15 @@ exports.cadastrarEstudante_post = (req, res) => {
         }
 
         // por fim, vai redirecionar para a página que lista livros cadastrados
-        return res.send("estudante");
+        return res.redirect("/login");
     });
 };
+
+exports.estudantesParticipantes = (req, res) => {
+    let consulta = Estudante.find({}, (err, estudante) => {//livrosCadastrados vai ser o array percorrido no acervo.ejs
+        // console.log(consulta);
+        if (err)
+            return res.status(500).send("Erro ao consultar estudantes participantes.");
+        res.render("estudantesParticipantes", {estudantesParticipantes:estudante});
+    })
+}

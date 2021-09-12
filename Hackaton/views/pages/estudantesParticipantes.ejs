@@ -1,0 +1,124 @@
+<%- include('../partials/header')%>
+
+        <main class="container mt-5">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="display-4 text-center">Estudantes Participantes</h1>
+                </div>
+
+                <!-- <% if (estudantesParticipantes == 0) { %>
+                    <div class="d-none">
+                        <div>
+                            <a href="/cadastrarLivro" class="btn btn-primary mr-5">Cadastrar Livro</a>
+                        </div>
+                    </div>
+                <% } else { %>
+                    <div class="col-12 d-flex justify-content-end">
+                        <a href="/cadastrarLivro" class="btn btn-primary mr-5">Cadastrar Livro</a>
+                    </div> 
+                <% } %> -->
+                
+
+                <div class="container">
+                    <table class="table table-hover table-striped table-light mt-5 mb-5">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Nome</th>
+                                <th class="text-center">Sobrenome</th>
+                                <th class="text-center">Email</th>
+                                                           
+                                <th colspan="3" class="text-center">Pontuação</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- <% if (livrosCadastrados == 0) { %>
+                                <tr>
+                                    <td colspan="8" class="alert alert-primary text-center text-uppercase" role="alert">
+                                        Não existem registros de livros cadastrados.
+                                    </td>
+                                    <td>                                        
+                                        <div class="d-flex justify-content-center">
+                                            <a href="/cadastrarLivro" class="btn btn-primary">Cadastrar Livro</a>
+                                        </div>                               
+                                    </td>
+                                </tr>
+                            <% } %> -->
+                            <% estudantesParticipantes.forEach(function(estudante) { %>
+                                <tr>
+                                    <td class="text-center">
+                                        <a href="/fichaLivro/<%= livro._id %>">
+                                            <%= estudante.nome %>
+                                        </a>
+                                    </td>
+                                    <td class="text-center">
+                                        <%= estudante.sobrenome %>
+                                    </td>
+                                    <td class="text-center">
+                                        <%= estudante.email %>
+                                    </td>
+                                    <!-- <td class="text-center">
+                                        <%= estudante.pontuacao %>
+                                    </td>    -->
+                                    <td class="text-center">
+                                        <a href="/editarCadastroLivro/<%= livro._id %>" class="btn btn-primary">+ 1 ponto</a>
+                                    </td>
+                                    <td class="text-center">
+                                        <a href="" class="btn btn-primary">+ 5 pontos</a>
+                                    </td>
+                                    <td class="text-center">
+                                        <a href="" class="btn btn-primary">+ 10 pontos</a>
+                                    </td>
+                                    <!-- <td>
+                                        <div>
+                                            <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#modalDeletar">
+                                              Deletar
+                                            </button>
+                                        </div>
+
+                                        <div class="modal fade" id="modalDeletar" tabindex="-1" aria-labelledby="abre janela para confirmar exclusão de livro do Banco de Dados"
+                                        aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLabel">
+                                                            Tem certeza que deseja excluir o registro desse livro do Banco de Dados?                                                    
+                                                        </h5>
+                                                
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    
+                                                    <div class="modal-body">
+                                                        <p>
+                                                            Uma vez excluídos, os dados não poderão ser mais recuperados.
+                                                        </p>  
+                                     
+                                                        
+                                                    </div>
+
+                                                    <div class="d-flex justify-content-around">
+                                                        <div class="modal-footer light">
+                                                            <a href="/deletarLivro/<%= livro._id %>" id="botaoDeletar" class="btn btn-danger">Deletar</a>
+       
+                                                        </div>
+
+                                                        <div class="modal-footer light">
+                                                            <button type="button" class="btn btn-dark" data-dismiss="modal">Fechar</button>
+                                                        </div>
+                                                    </div>
+                                                
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td> -->
+                                </tr>
+                           <% }) %>
+                        </tbody>
+                    </table>
+                </div>                  
+            </div>
+        </main>
+
+        <%- include('../partials/footer')%>

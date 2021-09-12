@@ -1,8 +1,11 @@
 const Cooperativa = require("../models/cooperativa-model");//vai chamar minha modelagem
 
-// exports.index = (req, res) => {
-//     res.render("./views/pages/index");
-// }
+exports.cooperativa = (req, res) => {
+    let id = req.params.id;
+    Cooperativa.findOne({ _id: id }, (err, cooperativa) => {
+        res.render("./views/pages/cooperativa", { cooperativa: cooperativa });
+    })
+}
 
 exports.cadastrarCooperativa_get = (req, res) => {
     res.render("./views/pages/cadastrarCooperativa");
@@ -27,13 +30,13 @@ exports.cadastrarCooperativa_post = (req, res) => {
     cooperativa.material = req.body.material;
     cooperativa.tipo_usuario = req.body.tipo_usuario;
     
-    console.log(cooperativa);
+    // console.log(cooperativa);
     //depois vai salvar o livro no BD
     cooperativa.save((err) => {
         if(err) 
             return res.status(500).send("Erro ao cadastrar cooperativa.");        
 
         // por fim, vai redirecionar para a página que lista livros cadastrados
-        res.send("cooperativa"); 
+        return res.redirect("/login"); 
     });
 };

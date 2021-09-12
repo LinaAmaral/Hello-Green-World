@@ -1,8 +1,6 @@
 var mongoose = require("mongoose");
 
-// mongoose.connect("mongodb+srv://rebeca_palmeira:rebeca_palmeira@cluster0.9jadt.mongodb.net/biblioteca?retryWrites=true&w=majority", {useNewUrlParser: true, useUnifiedTopology: true});
-
-const Escola = mongoose.model("escolas", {//variável Livro está configurando a modelagem dos documentos que serão cadastrados/instanciados futuramente
+const Escola = mongoose.model("escolas", {
     nome: String,
     cnpj: String,
     email: String,

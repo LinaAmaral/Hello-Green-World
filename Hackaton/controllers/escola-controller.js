@@ -1,11 +1,14 @@
 const Escola = require("../models/escola-model");//vai chamar minha modelagem
 
-// exports.index = (req, res) => {
-//     res.render("./views/pages/index");
-// }
-
 exports.escola = (req, res) => {
     res.render("./views/pages/escola");
+}
+
+exports.escola = (req, res) => {
+    let id = req.params.id;
+    Escola.findOne({ _id: id }, (err, escola) => {
+        res.render("./views/pages/escola", { escola: escola });
+    })
 }
 
 exports.cadastrarEscola_get = (req, res) => {
@@ -38,6 +41,6 @@ exports.cadastrarEscola_post = (req, res) => {
             return res.status(500).send("Erro ao cadastrar escola.");        
 
         // por fim, vai redirecionar para a página que lista livros cadastrados
-        res.send("escola"); 
+        return res.redirect("/login"); 
     });
 };
