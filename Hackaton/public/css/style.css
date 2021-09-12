@@ -154,7 +154,9 @@ input[checkbox] {
 .esptop {
   padding-top: 50px;
 }
-
+.esptop100 {
+  padding-top: 150px;
+}
 .espbot {
   padding-bottom: 50px;
 }
@@ -461,7 +463,6 @@ footer {
   background: #37050E;
   padding: 60px 0;
   color: rgba(255, 255, 255, .95);
-  margin-top: 100px;
 }
 
 .titfooter,
@@ -610,14 +611,6 @@ li.contfooter a:hover {
   text-align: center;
 }
 
-.wrapper {
-  padding-top: 40px;
-  padding-bottom: 40px;
-
-  &:focus {
-    outline: 0;
-  }
-}
 
 .clash-card {
   background: white;
@@ -704,90 +697,25 @@ li.contfooter a:hover {
   min-height: 450px;
   box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
 }
-@media (max-width: 768px) {
-  .card {
-    min-height: 350px;
+
+/* geral */
+
+.geral {
+  background: url('../images/bg-geral.jpg');
+  background-position: top;
+  background-repeat: repeat-y;
+  background-size: cover;
+  padding-bottom: 100px;
+}
+.estudante h5 {
+  font-size: 80px !important;
   }
-}
-@media (max-width: 420px) {
-  .card {
-    min-height: 300px;
-  }
-}
-.cooperariva .card.card-has-bg {
-  transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
-  background-size: 120%;
-  background-repeat: no-repeat;
-  background-position: center center;
-  margin-bottom: 30px;
-  min-height: 250px;
-}
-.cooperariva .card.card-has-bg:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: inherit;
-  -webkit-filter: grayscale(1);
-  -moz-filter: grayscale(100%);
-  -ms-filter: grayscale(100%);
-  -o-filter: grayscale(100%);
-  filter: grayscale(100%);
-}
-.cooperariva .card.card-has-bg:hover {
-  transform: scale(0.98);
-  box-shadow: 0 0 5px -2px rgba(0, 0, 0, 0.3);
-  background-size: 130%;
-  transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
-}
-.cooperariva .cooperariva .card.card-has-bg:hover .card-img-overlay {
-  transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
-  background: #234f6d;
-  background: linear-gradient(0deg, rgba(174, 40, 49, 0.3785889356) 0%, #810E13 100%);
-}
-.cooperariva .card .card-footer {
-  background: none;
-  border-top: none;
-}
-.cooperariva .card .card-footer .media img {
-  border: solid 3px rgba(234, 95, 0, 0.3);
-}
-.cooperariva .card .card-meta {
-  color: #FFF;
-}
-.cooperariva .card .card-body {
-  transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
-  font-size: 20px;
-}
-.cooperariva .card:hover {
-  cursor: pointer;
-  transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
-}
-.cooperariva .card:hover .card-body {
-  margin-top: 30px;
-  transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
-}
-.cooperariva .card .card-img-overlay {
-  transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
-  background: #234f6d;
-  background: linear-gradient(0deg, rgba(174, 40, 49, 0.3785889356) 0%, #810E13 100%);
-}
-.cooperariva .media-body {  font-size: 30px;
-  position: relative;
-  padding-left: 50px;
-}
-.cooperariva .media-body a {
-  color: #FFF;
-  
-  }
-  .cooperariva .media-body i {
-    position: absolute;
-    top: 10px;
-    left: 0;
-    font-size: 60px;
+  .estudante p {
+    font-size: 30px !important;
     }
+
+
+
 
 
 
@@ -897,3 +825,4 @@ li.contfooter a:hover {
     width: 95%;
   }
 }
+
