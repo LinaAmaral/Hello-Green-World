@@ -1,4 +1,4 @@
-const Escola = require("../models/escola-model");//vai chamar minha modelagem
+const Escola = require("../models/escola-model");
 
 exports.escola = (req, res) => {
     res.render("./views/pages/escola");
@@ -35,12 +35,11 @@ exports.cadastrarEscola_post = (req, res) => {
     escola.tipo_usuario = req.body.tipo_usuario;
     
     console.log(escola);
-    //depois vai salvar o livro no BD
+
     escola.save((err) => {
         if(err) 
             return res.status(500).send("Erro ao cadastrar escola.");        
 
-        // por fim, vai redirecionar para a página que lista livros cadastrados
         return res.redirect("/login"); 
     });
 };

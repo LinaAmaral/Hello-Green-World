@@ -6,9 +6,6 @@ exports.login_get = (req, res) => {
     res.render("./views/pages/login");
 }
 
-
-
-
 exports.login_post = (req, res) => {
     let email = req.body.email;
     let senha = req.body.senha;
@@ -16,24 +13,34 @@ exports.login_post = (req, res) => {
     Estudante.findOne({ $and: [{ email: email }, { senha: senha }] }, (err, usuario) => {
         if (err)
             return res.status(500).send("Erro ao conectar no banco de dados");
-        if (usuario.length != 0)
-            return res.send("área do estudante")
-    })
-    Cooperativa.findOne({ $and: [{ email: email }, { senha: senha }] }, (err, usuario) => {
-        var usuario_id = usuario._id
-         console.log(usuario_id)
-        if (err)
-            return res.status(500).send("Erro ao conectar no banco de dados");
-        if (usuario.length != 0)
-            return res.send("área da cooperativa")
-    })
-    Escola.findOne({ $and: [{ email: email }, { senha: senha }] }, (err, usuario) => {
-        if (err)
-            return res.status(500).send("Erro ao conectar no banco de dados");
-        if (usuario.length != 0)
-            return res.send("área da escola")
-        else
-            res.send("usuário não cadastrado");
-    })
+        
+        if(usuario) {
+            return res.redirect("/estudante/" + usuario._id);
+
+        } else {
+            Cooperativa.findOne({ $and: [{ email: email }, { senha: senha }] }, (err, usuario) => {
+                if (err)
+                    return res.status(500).send("Erro ao conectar no banco de dados");
+        
+                if(usuario) {        
+                    return res.redirect("/cooperativa/" + usuario._id);  
+                              
+                } else {
+                    Escola.findOne({ $and: [{ email: email }, { senha: senha }] }, (err, usuario) => {
+                        if (err)
+                                return res.status(500).send("Erro ao conectar no banco de dados");
+                        
+                        if(usuario) {
+                            return res.redirect("/escola/" + usuario._id);
+                                
+                        } else {
+                            return res.send("usuário não cadastrado");
+                        }
+                
+                    })
+                }
+            });
+        }
+    })  
 }
 

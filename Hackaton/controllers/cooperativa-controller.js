@@ -1,4 +1,4 @@
-const Cooperativa = require("../models/cooperativa-model");//vai chamar minha modelagem
+const Cooperativa = require("../models/cooperativa-model");
 
 exports.cooperativa = (req, res) => {
     let id = req.params.id;
@@ -29,14 +29,11 @@ exports.cadastrarCooperativa_post = (req, res) => {
     cooperativa.contato = req.body.contato;
     cooperativa.material = req.body.material;
     cooperativa.tipo_usuario = req.body.tipo_usuario;
-    
-    // console.log(cooperativa);
-    //depois vai salvar o livro no BD
+
     cooperativa.save((err) => {
         if(err) 
             return res.status(500).send("Erro ao cadastrar cooperativa.");        
 
-        // por fim, vai redirecionar para a página que lista livros cadastrados
         return res.redirect("/login"); 
     });
 };

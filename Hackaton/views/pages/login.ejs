@@ -2,21 +2,27 @@
 
 <body>
     <div class="container">
-        <div class="row">
-            <div class="col">
+        <div class="container">
+            <div>
                 <h1 class="mt-5 text-center text-uppercase">Insira seus dados para logar</h1>
-                <form action="/login" method="POST">
-                    <div class="form-group">
+                <form action="/login" method="POST" class="row">
+                    <div class="form-group col-6">
                         <label for="email">Email</label>
                         <input class="form-control" type="text" id="email" name="email" required>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group col-6">
                         <label for="senha">Senha</label>
                         <input type="password" class="form-control" id="senha" name="senha" required>
                     </div>
-                    <button type="submit" id="btn_enviar" class="btn btn-primary">Logar</button>
-                    <a href="/" class="btn btn-success">Voltar</a>
 
+                    <div class="container d-flex justify-content-around">
+                        <div>
+                            <button type="submit" id="btn_enviar" class="btn btn-dark">Logar</button>
+                        </div>
+                        <div>
+                            <a href="/" class="btn btn-danger">Voltar</a>
+                        </div>
+                    </div>                    
                 </form>
             </div>
         </div>

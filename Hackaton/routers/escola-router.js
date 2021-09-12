@@ -8,5 +8,4 @@ router.post("/cadastrarEscola", escolaController.cadastrarEscola_post);
 router.get("/", escolaController.escola);
 router.get("/:id", escolaController.escola);
 
-
 module.exports = router;

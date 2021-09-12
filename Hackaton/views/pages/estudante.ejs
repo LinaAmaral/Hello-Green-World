@@ -1,9 +1,48 @@
 <%- include('../partials/header')%>
 <main>
     <% if (estudante) { %>
-    <h1 class="display1 text-center"> <%= estudante.nome + estudante.sobrenome%> </h1> <% } 
-    
-    else { %>
+        <h1 class="display1 text-center"> Olá <%= estudante.nome + " " + estudante.sobrenome %>! </h1>  %>
+        </section>
+        <p>Chegou a hora de testar seus conhecimentos. Valendo 10 xps! Clique nos resíduos que você deve trazer para a
+            escola no dia da coleta.</p>
+        <section>
+            <img src="/images/reciclavelJogo/bebida1.jpg" class=" verdadeiro">
+            <img src="/images/reciclavelJogo/bebida2.jpg" class=" verdadeiro">
+            <img src="/images/reciclavelJogo/naoRecicla1.jpg">
+            <img src="/images/reciclavelJogo/bebida3.jpg" class=" verdadeiro">
+            <img src="/images/reciclavelJogo/bebida4.jpg" class=" verdadeiro">
+            <img src="/images/reciclavelJogo/naoRecicla2.jpg">
+            <img src="/images/reciclavelJogo/bebida5.jpg" class=" verdadeiro">
+            <img src="/images/reciclavelJogo/bebida6.jpg" class=" verdadeiro">
+            <img src="/images/reciclavelJogo/naoRecicla3.jpg">
+            <img src="/images/reciclavelJogo/bebida7.jpg" class=" verdadeiro">
+            <img src="/images/reciclavelJogo/naoRecicla4.jpg">
+        </section>
+
+        <aside>
+            <h1>Ranking</h1>
+            <img src="/images/taca.jpg" alt="taça">
+            <h2> 74 xp</h2>
+            <a href="#" id="AtivaPosicaoRanking">Ver minha posição no Ranking</a> <br>
+            <a href="#" id="AtivaExtratoBem">Ver meu extrato do bem</a> <br>
+
+            <div id="posicaoRanking">
+                1° Mariana da Silva - 140xp <br>
+                2° Marcela Rosa Veloso - 137xp <br>
+                3° Gustavo Lima Duarte - 98xp <br>
+            </div>
+            <div id="extratoBem">
+                120kg<br>
+                Com o lixo que você arrecadou até agora já impedimos que 1000 garrafas fossem parar nos oceanos. <br>
+                Você já ajudou a proteger a vida de 245 baleias que vivem próximo ao litoral do Brasil. <br>
+                Você ajudou a garantiu o trabalho de 25 catadores de material reciclável<br>
+            </div>
+        </aside>
+
+        <a href="#">Trocar meus XPs por prêmios incríveis</a>
+
+        <script src="/js/estudantes.js"></script>
+        <% } else { %>
         <h1 class="display1">Venha conhecer mais sobre o Green World</h1>
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">

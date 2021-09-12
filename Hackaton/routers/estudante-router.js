@@ -9,5 +9,4 @@ router.get("/", estudanteController.estudante);
 router.get("/:id", estudanteController.estudante);
 router.get("/estudantesParticipantes", estudanteController.estudantesParticipantes);
 
-
 module.exports = router;
