@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 
 const app = express();
 
-const port = 7005;
+const port = 5000;
 
 app.listen(port, () => {
     console.log(`Servidor inicializado na porta ${port}`);

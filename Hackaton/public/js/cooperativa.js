@@ -6,3 +6,13 @@ $(document).ready(function () {
         $("#posicaoRanking").toggle();
     })
 })
+
+$("#extratoDoBem").hide();
+
+$(document).ready(function () {
+
+    $("#AtivaExtrato").click(function(){
+        $("#extratoDoBem").toggle();
+    })
+})
+
