@@ -1,12 +1,18 @@
 <%- include('../partials/header')%>
+
     <link rel="stylesheet" href="/css/aluno-estilo.css">
+
+    
     <main>
         <% if (estudante) { %>
+
+            <div class="lina">
             <h1 class="display1 text-center"> Olá <%= estudante.nome + " " + estudante.sobrenome %>! </h1> %>
             </section>
             <h2>Chegou a hora de testar seus conhecimentos. Valendo 10 xps! Clique nos resíduos que você deve trazer
                 para
                 a escola no dia da coleta.</h2>
+
             <section class="cxImgJogo">
                 <img src="/images/reciclavelJogo/bebida1.jpg" class=" verdadeiro imgJogo">
                 <img src="/images/reciclavelJogo/bebida2.jpg" class=" verdadeiro imgJogo">
@@ -100,6 +106,8 @@
                     Você ajudou a garantiu o trabalho de 25 catadores de material reciclável<br>
                 </div>
             </aside>
+
+            </div>
 
             <% } else { %>
                 <div class="geral">
@@ -196,8 +204,12 @@
                             <div class="col-lg-2 text-center"><img class="imgfull" src="/images/imagem-10.jpg"><h3>Teste</h3><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit, fugit.</p></div>
                         </div>
                     </div>
+
+                    <%- include('../partials/premios-alunos')%>
                 
                 </div>
+
+                <%- include('../partials/footer')%>
 
                 <% } %>
 
@@ -207,5 +219,4 @@
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
         </script>
     <script src="/js/estudantes.js"></script>
-    <%- include('../partials/premios')%>
-    <%- include('../partials/footer')%>
+

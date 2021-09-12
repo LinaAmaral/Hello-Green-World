@@ -17,7 +17,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
 
-  <title>Hello, Green World!</title>
+  <title>Hello, world!</title>
 </head>
 
 <body>
@@ -32,58 +32,38 @@
   <header id="top">
     <div class="container">
       <div class="row">
-        <div class="col-lg-12">
-          <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand" href="/"><img class="logo" src="/images/logo.png"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                  <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item active">
-                  <a class="nav-link" href="/">Sobre o Projeto<span class="sr-only">(current)</span>
-                    <ul class="d-none">
-                      <li><a href="/cooperativa">Cooperativa</a></li>
-                      <li><a href="/escola">Escola</a></li>
-                      <li><a href="/estudante">Estudante</a></li>
-                    </ul>
-                  </a>
-                </li>
-                <li class="nav-item active">
-                  <a class="nav-link" href="/">Resgate seus Prêmios<span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item active">
-                  <a class="nav-link" href="/">FAQ<span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item active">
-                  <a class="nav-link" href="/contato">Contato<span class="sr-only">(current)</span></a>
-                </li>
-                <!-- <li class="nav-item active">
-                  <a class="nav-link" href="/login">Login/Cadastre-se<span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
-                </li> -->
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    Usuário
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="/login">Login</a>
-                    <a class="dropdown-item" href="#">Cadastre-se</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="/">Sair</a>
-                  </div>
-                </li>
-              </ul>
-            </div>
+        <div class="col-lg-4 logomeio"><a class="navbar-brand" href="#"><img class="logo" src="/images/new-logo.png"></a></div>
+        <div class="col-lg-8">
+          <nav class="menu">
+            <ol>
+              <li class="menu-item"><a class="bg-orange" href="#">Home</a></li>
+              <li class="menu-item">
+                <a class="bg-green" href="#">Sobre o Projeto</a>
+                <ol class="sub-menu">
+                  <li class="menu-item"><a href="#">Cooperativa</a></li>
+                  <li class="menu-item"><a href="#">Escola</a></li>
+                  <li class="menu-item"><a href="#">Estutante</a></li>
+                </ol>
+              </li>
+              <li class="menu-item"><a class="bg-blue" href="#">Resgate seus Prêmios</a></li>
+              <li class="menu-item"><a class="bg-pink" href="#">FAQ</a></li>
+              <li class="menu-item"><a class="bg-darkblue" href="#">Contato</a></li>
+            </ol>
           </nav>
+        </div>
+          
+<script>
+
+$(window).on('resize',function(){
+    if($(this).width() > 800){
+           $(".logomeio").hide();
+       } else {
+           $(".logomeio").show();
+       }
+});
+
+</script>
+
         </div>
       </div>
     </div>
