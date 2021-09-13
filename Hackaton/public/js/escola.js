@@ -8,15 +8,15 @@ $("#msgTnt").hide();
 
 $(document).ready(function () {
 
-    $("#AtivaPosicaoRanking").click(function(){
-        $("#posicaoRanking").toggle();
-    })
-    $("#AtivaextratoBem").click(function(){
-        $("#extratoBem").toggle();
-    })
-    $("#AtivaclassificaoAlunos").click(function(){
-        $("#classificaoAlunos").toggle();
-    })
+    // $("#AtivaPosicaoRanking").click(function(){
+    //     $("#posicaoRanking").toggle();
+    // })
+    // $("#AtivaextratoBem").click(function(){
+    //     $("#extratoBem").toggle();
+    // })
+    // $("#AtivaclassificaoAlunos").click(function(){
+    //     $("#classificaoAlunos").toggle();
+    // })
     $("#saco_vidro").click(function(){
         $("#msgVidro").show();
     })

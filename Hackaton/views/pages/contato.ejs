@@ -17,11 +17,13 @@
 
 <section>
     <div class="container">
-        <div class="row">
+        <div class="row esptop espbot">
             <div class="col-lg-4">
                 <h3>Olá!</h3>
-                <p>Nós gostamos muito de ouvir notícias, sugestões, críticas e elogios, pois isso nos ajuda a melhorar cada vez mais no nosso propósito de ter impacto positivo no mundo.</p>
-                <p>Temos vários canais de contato para que você possa escolher a maneira que mais te agrada para falar conosco.</p>
+                <p>Nós gostamos muito de ouvir notícias, sugestões, críticas e elogios, pois isso nos ajuda a melhorar
+                    cada vez mais no nosso propósito de ter impacto positivo no mundo.</p>
+                <p>Temos vários canais de contato para que você possa escolher a maneira que mais te agrada para falar
+                    conosco.</p>
 
                 <ul class="my-5">
                     <li class="contcad">
@@ -32,11 +34,11 @@
                     </li>
                     <li class="contcad">
                         <a href="https://api.whatsapp.com/send?phone=55###########" target="_blank">
-                            <img class="whatsapp" src="/images/whatsapp-icon.png" />
+                            <img src="/images/whats.png" />
                         </a>
                         <a href="https://api.whatsapp.com/send?phone=55###########" target="_blank">
                             <span>Whatsapp</span>
-                        </a>                        
+                        </a>
                     </li>
                     <li class="contcad">
                         <span class="icon">
@@ -54,9 +56,14 @@
                     <form action="/cooperativa/cadastrarCooperativa" method="POST" class="form">
                         <div class="row">
                             <div class="form-group col-lg-6 col-sm-12">
-                                <label for="nome">Nome:</label>
-                                <input class="form-control " type="text" id="nome" name="nome"
-                                    placeholder="Informe seu nome">
+                                <label for="email">Nome:</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text"><i class="fa fa-user"></i></div>
+                                    </div>
+                                    <input class="form-control " type="text" id="nome" name="nome"
+                                    placeholder="Informe seu nome" required>
+                                </div>
                             </div>
 
                             <div class="form-group col-lg-6 col-sm-12">
@@ -72,8 +79,11 @@
                         </div>
 
                         <div class="row">
+                            <div class="form-group col-lg-12">
                             <label for="msgContato">Mensagem:</label>
-                            <textarea class="form-control col-12" id="msgContato" rows="15" placeholder="Digite aqui sua mensangem"></textarea>
+                            <textarea class="form-control col-12" id="msgContato" rows="15"
+                                placeholder="Digite aqui sua mensangem"></textarea>
+                            </div>
                         </div>
 
                         <div class="row">

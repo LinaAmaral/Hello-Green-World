@@ -7,4 +7,8 @@ router.get("/", homeController.home);
 
 router.get("/contato", homeController.contato);
 
+router.get("/resgatePremio", homeController.resgatePremio);
+
+router.get("/time", homeController.time);
+
 module.exports = router;
