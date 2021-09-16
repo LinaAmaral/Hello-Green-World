@@ -7,4 +7,4 @@ Link para o nosso site: https://hello-green-world.herokuapp.com/
 
 Com este projeto conquistamos o 2° lugar no pódio!
 
-O dasafio era idealizar uma solução desrruptiva para engajar a população quanto ao descarte adequado de resíduos, aumentando a quantidade dos resíduos recicláveis. 
+O dasafio era idealizar uma solução disruptiva para engajar a população quanto ao descarte adequado de resíduos, aumentando a quantidade dos resíduos recicláveis. 
